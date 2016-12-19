@@ -8,9 +8,9 @@ namespace XBE.SplitTheBill.Core
 		}
 		#region ISplitBillCalculation implementation
 
-		public double AmountPerPerson(double totalBill, int numberOfPeople, int percentageOfTip)
+		public double AmountPerPerson(double totalBill, int numberOfPeople)
 		{
-			return ((totalBill) * ((double)percentageOfTip / 100) / numberOfPeople);
+			return (totalBill / numberOfPeople);
 		}
 
 		#endregion

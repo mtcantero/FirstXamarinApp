@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:XBE.SplitTheBillView" x:Class="XBE.SplitTheBillView.XBE_SplitTheBillViewPage">
-	<Label Text="Welcome to Mario's App!" VerticalOptions="Center" HorizontalOptions="Center" />
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XBE.SplitTheBillView.XBE_SplitTheBillViewPage">
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="20, 40, 20, 20" Android="20, 20, 20, 20" WinPhone="20, 20, 20, 20" />
+	</ContentPage.Padding>
+	<ContentPage.Content>
+		<StackLayout>
+			<StackLayout Orientation="Horizontal"  VerticalOptions="Start">
+				<!-- top controls -->
+				<Label Text = "SPLIT THE BILL"  />
+			</StackLayout>
+			<StackLayout VerticalOptions="CenterAndExpand">
+				<!-- middle controls -->
+				<Label Text="Enter the Amount" />
+				<Entry x:Name="amountText" Text="" />
+				<Label Text="How many people?" />
+				<Entry x:Name="peopleText" Text="" />
+				<Button x:Name="CalculateButon" Text="Calculate" Clicked="OnCalculate" />
+				<Label x:Name="amountToPay" Text="0" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal" VerticalOptions="End" BackgroundColor ="Black">
+				<!-- bottom controls -->
+				<Button x:Name="actionButton" Text="Translate" />
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
 </ContentPage>

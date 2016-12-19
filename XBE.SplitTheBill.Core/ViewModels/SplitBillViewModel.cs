@@ -11,57 +11,15 @@ namespace XBE.SplitTheBill.Core
 			_billCalculation = billCalculation;
 		}
 
-		public void Calculate()
-		{
-			AmountPerPerson = _billCalculation.AmountPerPerson(TotalBill, NumberOfPeople, PercentageOfTip);
-		}
+		public double totalBill { get; set; }
+		public int numberofPeople { get; set; }
 
-		double _totalBill;
-		public double TotalBill
+		public double Calculate()
 		{
-			get { return _totalBill; }
-			set
-			{
-				_totalBill = value;
-				RaisePropertyChanged(() => TotalBill);
-				Calculate();
-			}
+			var amount =   _billCalculation.AmountPerPerson(totalBill, numberofPeople);
+			return amount;
 		}
 
 
-		int _numberOfPeople;
-		public int NumberOfPeople
-		{
-			get { return _numberOfPeople; }
-			set
-			{
-				_numberOfPeople = value;
-				RaisePropertyChanged(() => NumberOfPeople);
-				Calculate();
-			}
-		}
-
-		int _percentageOfTip;
-		public int PercentageOfTip
-		{
-			get { return _percentageOfTip; }
-			set
-			{
-				_percentageOfTip = value;
-				RaisePropertyChanged(() => PercentageOfTip);
-				Calculate();
-			}
-		}
-
-		double _amountPerPerson;
-		public double AmountPerPerson
-		{
-			get { return _amountPerPerson; }
-			private set
-			{
-				_amountPerPerson = value;
-				RaisePropertyChanged(() => AmountPerPerson);
-			}
-		}
 	}
 }

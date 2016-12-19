@@ -10,10 +10,7 @@ namespace XBE.SplitTheBillView
 			InitializeComponent();
 
 			MainPage = new XBE_SplitTheBillViewPage();
-			MainPage = new ContentPage
-			{
-				Title = "Sample"
-			};
+
 		}
 
 		protected override void OnStart()
