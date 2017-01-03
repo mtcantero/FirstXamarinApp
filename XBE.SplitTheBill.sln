@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XBE.SplitTheBillView.iOS", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XBE.SplitTheBillView.Droid", "Droid\XBE.SplitTheBillView.Droid.csproj", "{A82177BD-D3F3-48D6-AD1E-0A7F15FA1EC3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XBE.SplitTheBill.Tests", "XBE.SplitTheBill.Tests\XBE.SplitTheBill.Tests.csproj", "{66E8E2D1-3BAD-48CE-B748-86EB4048A189}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,5 +69,17 @@ Global
 		{A82177BD-D3F3-48D6-AD1E-0A7F15FA1EC3}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{A82177BD-D3F3-48D6-AD1E-0A7F15FA1EC3}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{A82177BD-D3F3-48D6-AD1E-0A7F15FA1EC3}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{66E8E2D1-3BAD-48CE-B748-86EB4048A189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66E8E2D1-3BAD-48CE-B748-86EB4048A189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66E8E2D1-3BAD-48CE-B748-86EB4048A189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66E8E2D1-3BAD-48CE-B748-86EB4048A189}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66E8E2D1-3BAD-48CE-B748-86EB4048A189}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{66E8E2D1-3BAD-48CE-B748-86EB4048A189}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{66E8E2D1-3BAD-48CE-B748-86EB4048A189}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{66E8E2D1-3BAD-48CE-B748-86EB4048A189}.Release|iPhone.Build.0 = Release|Any CPU
+		{66E8E2D1-3BAD-48CE-B748-86EB4048A189}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{66E8E2D1-3BAD-48CE-B748-86EB4048A189}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{66E8E2D1-3BAD-48CE-B748-86EB4048A189}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{66E8E2D1-3BAD-48CE-B748-86EB4048A189}.Debug|iPhone.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

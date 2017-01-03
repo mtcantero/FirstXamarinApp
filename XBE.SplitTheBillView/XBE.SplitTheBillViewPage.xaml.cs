@@ -11,6 +11,7 @@ namespace XBE.SplitTheBillView
 		public XBE_SplitTheBillViewPage()
 		{
 			InitializeComponent();
+			BindingContext = new SplitBillViewModel();
 		}
 
 		//void OnTranslate(object sender, EventArgs e)
@@ -28,30 +29,18 @@ namespace XBE.SplitTheBillView
 		//	}
 		//}
 
-		void OnCalculate(object sender, EventArgs e)
-		{
-			var bill = new BillCalculation();
-			SplitBillViewModel model = new SplitBillViewModel(bill);
-			model.totalBill =  amountText.Text != ""?Double.Parse(amountText.Text):0;
-			model.numberofPeople = peopleText.Text != "" ? int.Parse(peopleText.Text) : 0;
-
-			var toPay = model.Calculate();
-			amountToPay.Text = toPay.ToString();
-		
-		}
-
-		//async void OnCall(object sender, EventArgs e)
+		//void OnCalculate(object sender, EventArgs e)
 		//{
-		//	if (await this.DisplayAlert(
-		//			"Dial a Number",
-		//			"Would you like to call " + translatedNumber + "?",
-		//			"Yes",
-		//			"No"))
-		//	{
-		//		var dialer = DependencyService.Get<IDialer>();
-		//		if (dialer != null)
-		//			dialer.Dial(translatedNumber);
-		//	}
+		//	var bill = new BillCalculation();
+		//	SplitBillViewModel model = new SplitBillViewModel(bill);
+		//	model.totalBill =  amountText.Text != ""?Double.Parse(amountText.Text):0;
+		//	model.numberofPeople = peopleText.Text != "" ? int.Parse(peopleText.Text) : 0;
+
+		//	var toPay = model.Calculate();
+		//	amountToPay.Text = toPay.ToString();
+		
 		//}
+
+
 	}
 }

@@ -12,15 +12,16 @@
 			<StackLayout VerticalOptions="CenterAndExpand">
 				<!-- middle controls -->
 				<Label Text="Enter the Amount" />
-				<Entry x:Name="amountText" Text="" />
+				<Entry x:Name="amountText" Text="{Binding TotalBill, Mode=TwoWay}"  Keyboard = "Numeric"/>
 				<Label Text="How many people?" />
-				<Entry x:Name="peopleText" Text="" />
-				<Button x:Name="CalculateButon" Text="Calculate" Clicked="OnCalculate" />
-				<Label x:Name="amountToPay" Text="0" />
+				<Entry x:Name="peopleText" Text="{Binding NumberOfPeople, Mode=TwoWay}" Keyboard = "Numeric" />
+				<Button x:Name="CalculateButon" Text="Calculate" Command="{Binding CalculateCommand}" />
+				<Label Text="Amount To Pay=" />
+				<Label Text="{Binding AmountPerPerson}" />
 			</StackLayout>
-			<StackLayout Orientation="Horizontal" VerticalOptions="End" BackgroundColor ="Black">
+			<StackLayout Orientation="Horizontal" VerticalOptions="End">
 				<!-- bottom controls -->
-				<Button x:Name="actionButton" Text="Translate" />
+
 			</StackLayout>
 		</StackLayout>
 	</ContentPage.Content>
